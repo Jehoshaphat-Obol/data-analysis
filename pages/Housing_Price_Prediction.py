@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from streamlit_lottie import st_lottie
-import joblib
+from sklearn.externals import joblib
 import json
 
 from pages.housing_price_prediction.components.Layout import Layout
