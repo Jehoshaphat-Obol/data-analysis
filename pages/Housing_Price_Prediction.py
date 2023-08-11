@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from streamlit_lottie import st_lottie
-import pickle
+import joblib
 import json
 
 from pages.housing_price_prediction.components.Layout import Layout
@@ -279,8 +279,7 @@ with predictions:
         furnishingstatus_input = 2
         
 
-    with open('{}/DecisionTreeRegressor'.format(root), 'rb') as file:
-        model = pickle.load(file)
+    model = joblib.load('{}/DecisionTreeRegressor'.format(root))
     
     prediction = model.predict([[furnishingstatus_input,parking_input, bedrooms_input,stories_input,bathrooms_input, mainroad_input, guestroom_input, basement_input,hotwaterheating_input, prefarea_input,airconditioning_input]])
     
