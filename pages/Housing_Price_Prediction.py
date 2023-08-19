@@ -7,10 +7,6 @@ import joblib
 import json
 
 from pages.housing_price_prediction.components.Layout import Layout
-st.set_page_config(
-    page_icon="📊",
-    layout='wide'
-)
 root = "./pages/housing_price_prediction"
 
 # load the required data
