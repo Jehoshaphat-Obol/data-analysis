@@ -6,6 +6,9 @@ from streamlit_lottie import st_lottie
 import joblib
 import json
 
+st.set_page_config(
+    layout="wide"
+)
 from pages.housing_price_prediction.components.Layout import Layout
 root = "./pages/housing_price_prediction"
 
