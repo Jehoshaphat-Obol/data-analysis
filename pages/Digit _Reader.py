@@ -5,6 +5,9 @@ import joblib
 import matplotlib.pyplot as plt
 from streamlit_drawable_canvas import st_canvas
 
+st.set_page_config(
+    layout="centered"
+)
 test, training = st.tabs(['Try it', 'Training'])
 
 st.sidebar.title("Moreen-Ai")
